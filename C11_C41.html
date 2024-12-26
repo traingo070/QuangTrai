@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thao tác từ C11 đến C41</title>
+    <!-- Bootstrap CSS (without integrity) -->
+    <link rel="stylesheet" href="/style/stylemain.css">
+    <link rel="stylesheet" href="/style/common.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container d-flex justify-content-center">
+            <img class="img-fluid" src="/image/SPKT.jpg" alt="SPKT Image">
+        </div>
+        <div class="d-flex justify-content-center  pt-3">
+            <div class="nav-button mr-3" onclick="window.location.href='DATNT3.html'">Home</div>
+            <div class="nav-button mr-3" onclick="window.location.href='https://hcmute.edu.vn/'">Thông tin Trường</div>
+           <div  class="nav-button" onclick="window.location.href='https://feee.hcmute.edu.vn'"> Thông tin khoa Điện Điện tử</div>
+        </div>
+        <div class="account-bar d-flex align-items-center gap-2" id="accountBar" style="display: none;">
+            <span id="usernameDisplay">Ngô Quang Trãi</span>
+            <button class="btn btn-danger btn-sm logout-button" onclick="logout()">Thoát</button>
+        </div>
+    </header>
+    <h1 class="text-center mt-5 mb-4 text-danger">Thao tác từ C11 đến C41</h1>
+    <div class="container-fuild">
+        <div class="row m-0">
+            <div class="col-12 col-md-5 mt-5">
+                <div class="ml-5 pl-5">
+                    <div class="mb-4">
+                        <h3 class="text-success">Thao tác từ C11 đến C41</h2>
+                            <ul>
+                                <li class="click" id="group-1">Đưa MBA T1 ra sữa chữa</li>
+                                <li class="click" id="group-2">Đưa MBA T1 vận hành sau khi sữa chữa</li>
+                                <li class="click" id="group-3">Vận hành đóng cấp nguồn từ C11 đến C41</li>
+                                <li class="click" id="group-4">Vận hành cắt cấp nguồn từ C11 đến C41</li>
+                            </ul>
+                    </div>
+                    <div class="ml-5 mb-4 group-1 d-none">
+                        <h4 class="text-success">Đưa MBA T1 ra sữa chữa</h4>
+                        <ul>
+                            <li class="group-1-1">B1: Cắt MBA T1</li>
+                            <li class="group-1-2">B2: Cắt MC 431 </li>
+                            <li class="group-1-3">B3: MC 131 </li>
+                            <li class="group-1-4">B4: Cắt DCL 131-1</li>
+                            <li class="group-1-5">B5: Kiểm tra phần điện phía hạ áp cao áp MBA phải ko còn điện</li>
+                            <li class="group-1-5">B6: Đóng DTĐ 431-38</li>
+                            <li class="group-1-6">B7: Hạ chóng sét MBA CS1T1, CS4T1</li>
+                        </ul>
+                    </div>
+                    <div class="ml-5 mb-4 group-2 d-none">
+                        <h4 class="text-success"> Đưa MBA T1 vận hành sau khi sữa chữa</h4>
+                        <ul>
+                            <li  class="group-2-1">B1: Kiểm tra MBA T1 đủ điều kiện vận hành chưa</li>
+                            <li class="group-2-1">B2: Kiểm tra các MC đều ở vị trí cắt</li>
+                            <li class="group-2-1">B3: Cắt DTĐ 431-38</li>
+                            <li class="group-2-2">B4: Cắt chống sét MBA CS1T1, CS4T1</li>
+                            <li class="group-2-4">B5: Kiểm tra không có tiếp địa di động trên MBA</li>
+                            <li class="group-2-4">B6: Đóng DCL 131-1</li>
+                            <li class="group-2-5">B7: Đóng MC 131</li>
+                            <li class="group-2-6">B8: Đóng MC 431</li>
+                            <li class="group-2-7">B9: Kiểm tra MBA T1 khi làm việc bình thường</li>
+                        </ul>
+                    </div>
+                    <div class="ml-5 mb-4 group-3 d-none">
+                        <h4 class="text-success">Vận hành đóng cấp nguồn từ C11 đến C41</h4>
+                        <ul>
+                            <li class="group-3-1" >B1: Cắt DTĐ 131-14</li>
+                            <li class="group-3-2">B2: Đóng DCL 131-1</li>
+                            <li class="group-3-3">B3: Đóng MC 131</li>
+                            <li class="group-3-4">B4: Đóng MC 431</li>
+                            <li class="group-3-5">B5: Đóng MBA T1</li>
+                        </ul>
+                    </div>
+                    <div class="ml-5 mb-4 group-4 d-none">
+                        <h4 class="text-success">Vận hành cắt cấp nguồn từ C11 đến C41</h4>
+                        <ul>
+                            <li class="group-4-1">Cắt MBA T1</li>
+                            <li  class="group-4-2">B2: Cắt MC 431</li>
+                            <li  class="group-4-3">B3: Cắt MC 131</li>
+                            <li  class="group-4-4">B4: Cắt DCL 131-1</li>
+                            <li  class="group-4-5">B5: Đóng DTĐ 131-14</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12 col-md-7 mt-5 mb-5 p-5">
+                <div class="d-flex justify-content-center">
+                    <div class="box" style="padding:4rem 0rem 0 14rem; background-color: #fff;">
+                        <div class="">
+                            <div class="row" style="margin-top: 3.8rem;margin-left: -205px;">
+
+                                <div class="row" style="margin-left: 13px;">
+                                    <div class="row m-0">
+                                        <div style="position: relative;top: 6px;">
+                                            <div class="line TUC11-l"
+                                                style="position: absolute;right: 0px;top: -14px;height: 18px;">
+                                            </div>
+                                            <div class="line TUC11-l"
+                                                style="position: absolute;right: -8px;top: -16px;height: 22px;">
+                                            </div>
+                                            <div class="line TUC11-l"
+                                                style="position: absolute;right: -16px;top: -18px;height: 26px;">
+                                            </div>
+                                            <div class="line TUC11-l"
+                                                style="position: absolute;right: -24px;top: -20px;"></div>
+
+                                        </div>
+                                        <div class="horizontal-line TUC11-l" style="margin-left: 23px;"></div>
+                                        <div style="position: relative;">
+                                            <div class="line TUC11-l" style="position: absolute;right: 0px;top: -14px;">
+                                            </div>
+                                            <div class="line ml-2 TUC11-l"
+                                                style="position: absolute;right: -8px;top: -14px;">
+                                            </div>
+                                        </div>
+                                        <div class="horizontal-line ml-2 TUC11-l"></div>
+                                    </div>
+                                    <div>
+                                        <div class="line TUC11-t" style="height:15px;"></div>
+                                        <div style=" position: relative;left: -4px;top: -3px;">
+                                            <div class="circle TUC11" style="position: absolute;left: -10px;"></div>
+                                            <div class="circle TUC11" style="position: absolute;"></div>
+                                            <div class="circle TUC11" style="position: absolute;top: 8px;left: -5px;">
+                                            </div>
+                                            <div style="position: absolute;top: 4px;left:24px;">TUC11</div>
+                                        </div>
+                                    </div>
+                                    <div class="row m-0">
+                                        <div class="horizontal-line TUC11-r"></div>
+                                        <div style="position: relative;">
+                                            <div class="line TUC11-r" style="position: absolute;right: 0px;top: -14px;">
+                                            </div>
+                                            <div class="line ml-2 TUC11-r"
+                                                style="position: absolute;right: -8px;top: -14px;">
+                                            </div>
+                                        </div>
+                                        <div class="horizontal-line ml-2 TUC11-r"></div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="horizontal-main C11"></div>
+                                <div>C11</div>
+                            </div>
+                            <div class="line 131-1-t" style="margin-left: 13px;margin-top: -20px;"></div>
+                            <div class="line 131-1-t" style="margin-left: 13px;"></div>
+                            <div class="line 131-1-t" style="margin-left: 13px;"></div>
+                            <div class="line 131-1-t" style="margin-left: 13px;"></div>
+                        </div>
+                        <div style="margin-top: -14px;">
+
+                            <div style="position: relative;">
+                                <div class="line 131-1-t" style="margin-left: 13px;"></div>
+                                <div class="circle 131-1" style="margin-left: 4.5px"></div>
+                                <div class="line 131-1-b" style="margin-left: 13px;"></div>
+                                <span class=""
+                                    style="position: absolute;top: 2.5rem;left:1.8rem;width: 60px;">131-1</span>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: -6rem;margin-left: -105px;">
+                            <div style="position: relative;top: 6px;">
+                                <div class="line 131-14-l"
+                                    style="position: absolute;right: 0px;top: -14px;height: 18px;">
+                                </div>
+                                <div class="line 131-14-l"
+                                    style="position: absolute;right: -8px;top: -16px;height: 22px;">
+                                </div>
+                                <div class="line 131-14-l"
+                                    style="position: absolute;right: -16px;top: -18px;height: 26px;">
+                                </div>
+                                <div class="line 131-14-l" style="position: absolute;right: -24px;top: -20px;"></div>
+
+                            </div>
+                            <div class="row" style="margin-left: 22px;">
+                                <div class="horizontal-line 131-14-l"></div>
+                                <div style="position: relative;">
+                                    <div style="top: -7px;position: absolute;right: -16px;">
+                                        <div class="diamond 131-14"></div>
+                                    </div>
+                                    <span class=""
+                                        style="position: absolute;top: 8px;right: -40px;width: 60px;">131-14</span>
+                                </div>
+                                <div class="horizontal-line 131-14-r" style="margin-left: 18px;"></div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 5.9rem;margin-left: -105px;">
+                            <div style="position: relative;top: 6px;">
+                                <div class="line 131-15-l"
+                                    style="position: absolute;right: 0px;top: -14px;height: 18px;">
+                                </div>
+                                <div class="line 131-15-l"
+                                    style="position: absolute;right: -8px;top: -16px;height: 22px;">
+                                </div>
+                                <div class="line 131-15-l"
+                                    style="position: absolute;right: -16px;top: -18px;height: 26px;">
+                                </div>
+                                <div class="line 131-15-l" style="position: absolute;right: -24px;top: -20px;"></div>
+
+                            </div>
+                            <div class="row" style="margin-left: 22px;">
+                                <div class="horizontal-line 131-15-l"></div>
+                                <div style="position: relative;">
+                                    <div style="top: -7px;position: absolute;right: -16px;">
+                                        <div class="diamond 131-15"></div>
+                                    </div>
+                                    <span class=""
+                                        style="position: absolute;top: 8px;right: -40px;width: 60px;">131-15</span>
+                                </div>
+                                <div class="horizontal-line 131-15-r" style="margin-left: 18px;"></div>
+                            </div>
+                        </div>
+                        <div style="margin-top: -14px;">
+                            <div style="position: relative;">
+                                <div class="line 131-t" style="margin-left: 13px;"></div>
+                                <div class="rectangle 131" style="margin-left: 6.5px;"></div>
+                                <div class="line 131-b" style="margin-left: 13px;"></div>
+                                <span class=""
+                                    style="position: absolute;top: 2.5rem;left:1.8rem;width: 60px;">131</span>
+                            </div>
+                        </div>
+                        <div style="margin-top: -14px;">
+                            <div style="position: relative;">
+                                <div class="line T1-t" style="margin-left: 13px;"></div>
+                                <div class="T1" style="position: absolute;margin-left:-40px;">
+                                    <img src="/image/1-a.jpg" width="100px" alt="">
+                                </div>
+                                <div class="line T1-b" style="margin-left: 13px;margin-top: 46px;"></div>
+                                <span class="" style="position: absolute;top: 2.5rem;width: 200px;text-align:center;">T1
+                                    <br> 40MVA <br>15+ 9*1,78%/23/11kV</span>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: -6rem;margin-left: -105px;">
+                            <div style="position: relative;top: 6px;">
+                                <div class="line CS1T1-l"
+                                    style="position: absolute;right: 0px;top: -14px;height: 18px;">
+                                </div>
+                                <div class="line CS1T1-l"
+                                    style="position: absolute;right: -8px;top: -16px;height: 22px;">
+                                </div>
+                                <div class="line CS1T1-l"
+                                    style="position: absolute;right: -16px;top: -18px;height: 26px;">
+                                </div>
+                                <div class="line CS1T1-l" style="position: absolute;right: -24px;top: -20px;"></div>
+
+                            </div>
+                            <div class="row" style="margin-left: 22px;">
+                                <div class="horizontal-line CS1T1-l"></div>
+                                <div style="position: relative;">
+                                    <div class="CS1T1" style="top: -13px;position: absolute;right: -30px;">
+                                        <img src="/image/2-a.png" width="50px" alt="">
+                                    </div>
+                                    <span class=""
+                                        style="position: absolute;top: 8px;right: -40px;width: 60px;">CS1T1</span>
+                                </div>
+                                <div class="horizontal-line CS1T1-r" style="margin-left: 18px;"></div>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-top:5.8rem;margin-left: -105px;">
+                            <div style="position: relative;top: 6px;">
+                                <div class="line CS4T1-l"
+                                    style="position: absolute;right: 0px;top: -14px;height: 18px;">
+                                </div>
+                                <div class="line CS4T1-l"
+                                    style="position: absolute;right: -8px;top: -16px;height: 22px;">
+                                </div>
+                                <div class="line CS4T1-l"
+                                    style="position: absolute;right: -16px;top: -18px;height: 26px;">
+                                </div>
+                                <div class="line CS4T1-l" style="position: absolute;right: -24px;top: -20px;"></div>
+
+                            </div>
+                            <div class="row" style="margin-left: 22px;">
+                                <div class="horizontal-line CS4T1-l"></div>
+                                <div style="position: relative;">
+                                    <div style="top: -7px;position: absolute;right: -16px;">
+                                        <div class="diamond CS4T1"></div>
+                                    </div>
+                                    <span class=""
+                                        style="position: absolute;top: 8px;right: -40px;width: 60px;">CS4T1</span>
+                                </div>
+                                <div class="horizontal-line CS4T1-r" style="margin-left: 18px;"></div>
+                            </div>
+                        </div>
+                        <div class="line T1-b" style="margin-left: 13px;"></div>
+                        <div class="line T1-b" style="margin-left: 13px;"></div>
+                        <div class="row" style="margin-left: -105px;">
+                            <div style="position: relative;top: 6px;">
+                                <div class="line 431-38-l"
+                                    style="position: absolute;right: 0px;top: -14px;height: 18px;">
+                                </div>
+                                <div class="line 431-38-l"
+                                    style="position: absolute;right: -8px;top: -16px;height: 22px;">
+                                </div>
+                                <div class="line 431-38-l"
+                                    style="position: absolute;right: -16px;top: -18px;height: 26px;">
+                                </div>
+                                <div class="line 431-38-l" style="position: absolute;right: -24px;top: -20px;"></div>
+
+                            </div>
+                            <div class="row" style="margin-left: 22px;">
+                                <div class="horizontal-line 431-38-l"></div>
+                                <div style="position: relative;">
+                                    <div style="top: -7px;position: absolute;right: -16px;">
+                                        <div class="diamond 431-38"></div>
+                                    </div>
+                                    <span class=""
+                                        style="position: absolute;top: 8px;right: -40px;width: 60px;">431-38</span>
+                                </div>
+                                <div class="horizontal-line 431-38-r" style="margin-left: 18px;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="position: relative;">
+                                <div class="line 431-t" style="margin-left: 13px;"></div>
+                                <div style="position: absolute;left: 1.5px;margin-top: -8px;"><img
+                                        src="/image/arrow-up.png" alt="">
+                                </div>
+                                <div class="431-up" style="position: absolute;margin-top: -3px;left: 1.5px;"><img
+                                        src="/image/arrow-up.png" alt=""></div>
+                                <div class="line 431" style="margin-left: 13px;height:25px;"></div>
+                                <div class="rectangle 431" style="margin-left: 6.5px;"></div>
+                                <div class="431-down" style="position: absolute;left: 1.5px;"><img
+                                        src="/image/down-arrow.png" alt="">
+                                </div>
+                                <div style="position: absolute;margin-top: 5px;left: 1.5px;"><img
+                                        src="/image/down-arrow.png" alt=""></div>
+                                <div class="line 431" style="margin-left: 13px;height:25px;"></div>
+                                <div class="line 431-b" style="margin-left: 13px;"></div>
+                                <span class=""
+                                    style="position: absolute;top: 2.5rem;left:1.8rem;width: 60px;">431</span>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-left: -105px;">
+                            <div>C41</div>
+                            <div class="horizontal-main C41"></div>
+                        </div>
+                    </div>
+                    <div class="group-1 d-none">
+                        <div class="pl-5 pr-5">
+                            <div class="row m-3">
+                                <div class="col-12 text-center title-btn p-0">MBA T1</div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-success"
+                                        id="o-T1-group-1">Mở</button></div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-danger"
+                                        id="c-T1-group-1">Đóng</button></div>
+                            </div>
+                            <div class="row m-3">
+                                <div class="col-12 text-center title-btn p-0">MC 431</div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-success"
+                                        id="o-431-group-1">Mở</button></div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-danger"
+                                        id="c-431-group-1">Đóng</button></div>
+                            </div>
+                            <div class="row m-3">
+                                <div class="col-12 text-center title-btn p-0">MC 131 </div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-success"
+                                        id="o-131-group-1">Mở</button></div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-danger"
+                                        id="c-131-group-1">Đóng</button></div>
+                            </div>
+                            <div class="row m-3">
+                                <div class="col-12 text-center title-btn p-0">DCL 131-1 </div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-success"
+                                        id="o-131-1-group-1">Mở</button></div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-danger"
+                                        id="c-131-1-group-1">Đóng</button></div>
+                            </div>
+                            <div class="row m-3">
+                                <div class="col-12 text-center title-btn p-0">DTĐ 431-38 </div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-success"
+                                        id="o-431-38-group-1">Mở</button></div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-danger"
+                                        id="c-431-38-group-1">Đóng</button></div>
+                            </div>
+                            <div class="row m-3">
+                                <div class="col-12 text-center title-btn p-0">MBA CS1T1 </div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-success"
+                                        id="o-CS1T1-group-1">Mở</button></div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-danger"
+                                        id="c-CS1T1-group-1">Đóng</button></div>
+                            </div>
+                            <div class="row m-3">
+                                <div class="col-12 text-center title-btn p-0">CS4T1 </div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-success"
+                                        id="o-CS4T1-group-1">Mở</button></div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-danger"
+                                        id="c-CS4T1-group-1">Đóng</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group-2 d-none">
+                        <div class="pl-5 pr-5">
+                            <div class="row m-3">
+                                <div class="col-12 text-center title-btn p-0">DTĐ 431-38</div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-success"
+                                        id="o-431-38-group-2">Mở</button></div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-danger"
+                                        id="c-431-38-group-2">Đóng</button></div>
+                            </div>
+                            <div class="row m-3">
+                                <div class="col-12 text-center title-btn p-0">MBA CS1T1</div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-success"
+                                        id="o-CS1T1-group-2">Mở</button></div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-danger"
+                                        id="c-CS1T1-group-2">Đóng</button></div>
+                            </div>
+                            <div class="row m-3">
+                                <div class="col-12 text-center title-btn p-0">CS4T1 </div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-success"
+                                        id="o-CS4T1-group-2">Mở</button></div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-danger"
+                                        id="c-CS4T1-group-2">Đóng</button></div>
+                            </div>
+                            <div class="row m-3">
+                                <div class="col-12 text-center title-btn p-0">DCL 131-1 </div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-success"
+                                        id="o-131-1-group-2">Mở</button></div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-danger"
+                                        id="c-131-1-group-2">Đóng</button></div>
+                            </div>
+                            <div class="row m-3">
+                                <div class="col-12 text-center title-btn p-0">MC 131 </div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-success"
+                                        id="o-131-group-2">Mở</button></div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-danger"
+                                        id="c-131-group-2">Đóng</button></div>
+                            </div>
+                            <div class="row m-3">
+                                <div class="col-12 text-center title-btn p-0">MC 431 </div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-success"
+                                        id="o-431-group-2">Mở</button></div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-danger"
+                                        id="c-431-group-2">Đóng</button></div>
+                            </div>
+                            <div class="row m-3">
+                                <div class="col-12 text-center title-btn p-0">MBA T1</div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-success"
+                                        id="o-T1-group-2">Mở</button></div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-danger"
+                                        id="c-T1-group-2">Đóng</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group-3 d-none">
+                        <div class="pl-5 pr-5">
+                            <div class="row m-3">
+                                <div class="col-12 text-center title-btn p-0">DTĐ 131-14</div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-success"
+                                        id="o-131-14-group-3">Mở</button></div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-danger"
+                                        id="c-131-14-group-3">Đóng</button></div>
+                            </div>
+                            <div class="row m-3">
+                                <div class="col-12 text-center title-btn p-0">DCl 131-1</div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-success"
+                                        id="o-131-1-group-3">Mở</button></div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-danger"
+                                        id="c-131-1-group-3">Đóng</button></div>
+                            </div>
+                            <div class="row m-3">
+                                <div class="col-12 text-center title-btn p-0">MC 131 </div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-success"
+                                        id="o-131-group-3">Mở</button></div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-danger"
+                                        id="c-131-group-3">Đóng</button></div>
+                            </div>
+                            <div class="row m-3">
+                                <div class="col-12 text-center title-btn p-0">MC 431 </div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-success"
+                                        id="o-431-group-3">Mở</button></div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-danger"
+                                        id="c-431-group-3">Đóng</button></div>
+                            </div>
+                            <div class="row m-3">
+                                <div class="col-12 text-center title-btn p-0">MBA T1 </div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-success"
+                                        id="o-T1-group-3">Mở</button></div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-danger"
+                                        id="c-T1-group-3">Đóng</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group-4 d-none">
+                        <div class="pl-5 pr-5">
+                            <div class="row m-3">
+                                <div class="col-12 text-center title-btn p-0">MBA T1</div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-success"
+                                        id="o-T1-group-4">Mở</button></div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-danger"
+                                        id="c-T1-group-4">Đóng</button></div>
+                            </div>
+                            <div class="row m-3">
+                                <div class="col-12 text-center title-btn p-0">MC 431</div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-success"
+                                        id="o-431-group-4">Mở</button></div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-danger"
+                                        id="c-431-group-4">Đóng</button></div>
+                            </div>
+                            <div class="row m-3">
+                                <div class="col-12 text-center title-btn p-0">MC 131 </div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-success"
+                                        id="o-131-group-4">Mở</button></div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-danger"
+                                        id="c-131-group-4">Đóng</button></div>
+                            </div>
+                            <div class="row m-3">
+                                <div class="col-12 text-center title-btn p-0">DCl 131-1 </div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-success"
+                                        id="o-131-1-group-4">Mở</button></div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-danger"
+                                        id="c-131-1-group-4">Đóng</button></div>
+                            </div>
+                            <div class="row m-3">
+                                <div class="col-12 text-center title-btn p-0">DTĐ 131-14 </div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-success"
+                                        id="o-131-14-group-4">Mở</button></div>
+                                <div class="col-md-6 text-center p-0"><button class="btn btn-danger"
+                                        id="c-131-14-group-4">Đóng</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper (without integrity) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Toggle visibility for instruction groups
+            var step = 1;
+            $('.click').on('click', function () {
+                // Get the group ID of the clicked item
+                const groupId = $(this).attr('id');
+                resetStylesAndImages()
+                // Hide all groups and show the clicked one
+                $('.group-1, .group-2, .group-3,.group-4').addClass('d-none');
+                $(`.${groupId}`).removeClass('d-none');
+                if (groupId == "group-1") {
+                    $('.C11,.C41').css('background-color', '#ff0300');
+                    $('.TUC11,.TUC11-l,.TUC11-r,.TUC11-t').css('background-color', '#ff0300');
+                    $('.131-1,.131-1-t,.131-1-b').css('background-color', '#ff0300');
+                    $('.131-14-r').css('background-color', '#ff0300');
+                    $('.131-15-r').css('background-color', '#ff0300');
+                    $('.131,.131-t,.131-b').css('background-color', '#ff0300');
+                    $('.T1-t,.T1-b').css('background-color', '#ff0300');
+                    $('.CS1T1-r').css('background-color', '#ff0300');
+                    $('.CS4T1-r').css('background-color', '#ff0300');
+                    $('.431-38-r').css('background-color', '#ff0300');
+                    $('.431,.431-t,.431-b').css('background-color', '#ff0300');
+                    $('.431-up img').attr('src', '/image/arrow-up-red.png');
+                    $('.431-down img').attr('src', '/image/arrow-down-red.png');
+
+                    $('.131-14,.131-15,.CS4T1,.431-38').css('background-color', '#01fb42');
+                    $('.CS1T1 img').attr('src', '/image/2-b.png');
+                    $('.T1 img').attr('src', '/image/1-a.jpg');
+                
+                }
+                if (groupId == "group-2") {
+                    $('.C11,.C41').css('background-color', '#ff0300');
+                    $('.TUC11,.TUC11-l,.TUC11-r,.TUC11-t').css('background-color', '#ff0300');
+                    $('.131-1,.131-1-t,.131-1-b').css('background-color', '#ff0300');
+                    $('.131-14-r').css('background-color', '#ff0300');
+                    $('.131-15-r').css('background-color', '#ff0300');
+                    $('.131,.131-t,.131-b').css('background-color', '#ff0300');
+                    $('.T1-t,.T1-b').css('background-color', '#ff0300');
+                    $('.CS1T1-r').css('background-color', '#ff0300');
+                    $('.CS4T1-r').css('background-color', '#ff0300');
+                    $('.431-38-r').css('background-color', '#ff0300');
+                    $('.431,.431-t,.431-b').css('background-color', '#ff0300');
+                    $('.431-up img').attr('src', '/image/arrow-up-red.png');
+                    $('.431-down img').attr('src', '/image/arrow-down-red.png');
+
+                    $('.131-14,.131-15,.CS4T1,.431-38').css('background-color', '#01fb42');
+                    $('.CS1T1 img').attr('src', '/image/2-b.png');
+
+
+                    $('.T1 img').attr('src', '/image/1-b.jpg');
+
+                    $('.T1-b').css('background-color', '');
+                    $('.CS4T1-r').css('background-color', '');
+                    $('.431-t,.431-b').css('background-color', '');
+                    $('.431-38-r,.C41').css('background-color', '');
+                    $('.431').css('background-color', '#01fb42');
+                    $('.431-up img').attr('src', '/image/arrow-up-green.png');
+                    $('.431-down img').attr('src', '/image/arrow-down-green.png');
+                    $('.CS1T1-r,.131-b,.T1-t,.131').css('background-color', '');
+                    $('.131-t,.131-14-r,.131-15-r,.131-1,.131-1-b').css('background-color', '');
+                    $('.431-38').css('background-color', '#ff0300');
+                    $('.CS1T1 img').attr('src', '/image/2-a.png');
+                    $('.CS4T1').css('background-color', '#ff0300');
+                }
+                else if (groupId == "group-3") {
+                    $('.C11').css('background-color', '#ff0300');
+                    $('.TUC11,.TUC11-l,.TUC11-r,.TUC11-t').css('background-color', '#ff0300');
+                    $('.131-1-t').css('background-color', '#ff0300');
+                    $('.131-14-r,.131-14,.131-14-l').css('background-color', '#ff0300');
+
+
+
+
+                    $('.131,.131-15,.CS4T1,.431-38').css('background-color', '#01fb42');
+                    $('.CS1T1 img').attr('src', '/image/2-b.png');
+                }
+
+                else if (groupId == "group-4") {
+                    $('.C11').css('background-color', '#ff0300');
+                    $('.TUC11,.TUC11-l,.TUC11-r,.TUC11-t').css('background-color', '#ff0300');
+                    $('.131-1-t').css('background-color', '#ff0300');
+                    $('.131-14-r,.131-14,.131-14-l').css('background-color', '#ff0300');
+
+
+
+
+                    $('.131,.131-15,.CS4T1,.431-38').css('background-color', '#01fb42');
+                    $('.CS1T1 img').attr('src', '/image/2-b.png');
+
+                    $('.131-14').css('background-color', '#01fb42');
+                    $('.131-14-l').css('background-color', '');
+                    $('.131-1,.131-1-b,.131-t,.131-15-r').css('background-color', '#ff0300');
+                    $('.131,.131-t,.131-15-r,.131-b,.T1-t,.CS1T1-r').css('background-color', '#ff0300');
+                    $('.431').css('background-color', '#ff0300');
+                    $('.431-up img').attr('src', '/image/arrow-up-red.png');
+                    $('.431-down img').attr('src', '/image/arrow-down-red.png');
+                    $('.T1 img').attr('src', '/image/1-a.jpg');
+                    $('.C41,.431-b,.431-t,.431-38-r,.T1-b,.CS4T1-r').css('background-color', '#ff0300');
+                }
+            });
+
+
+            //group-1
+            //step1
+            $('#o-T1-group-1').click(function () {
+
+                if (step == 1) {
+                    step = 2;
+                    $('.T1 img').attr('src', '/image/1-b.jpg');
+
+                    $('.T1-b').css('background-color', '');
+                    $('.CS4T1-r').css('background-color', '');
+                    $('.431-t,.431-b').css('background-color', '');
+                    $('.431-38-r,.C41').css('background-color', '');
+
+                    $('.group-1-1').addClass('red')
+
+                } else {
+                    alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại ')
+                }
+
+            });
+            //step2
+            $('#o-431-group-1').click(function () {
+
+                if (step == 2) {
+                    step = 3;
+                    $('.431').css('background-color', '#01fb42');
+                    $('.431-up img').attr('src', '/image/arrow-up-green.png');
+                    $('.431-down img').attr('src', '/image/arrow-down-green.png');
+                    $('.group-1-2').addClass('red')
+                } else {
+                    alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại ')
+                }
+
+            });
+            //step3
+            $('#o-131-group-1').click(function () {
+
+                if (step == 3) {
+                    step = 4;
+                    $('.CS1T1-r,.131-b,.T1-t,.131').css('background-color', '');
+                    $('.group-1-3').addClass('red')
+                } else {
+                    alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại ')
+                }
+
+            });
+            //step4
+            $('#o-131-1-group-1').click(function () {
+
+                if (step == 4) {
+                    step = 5;
+                    $('.131-t,.131-14-r,.131-15-r,.131-1,.131-1-b').css('background-color', '');
+                    $('.group-1-4').addClass('red')
+                } else {
+                    alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại ')
+                }
+
+            });
+            //step5
+            $('#c-431-38-group-1').click(function () {
+
+                if (step == 5) {
+                    step = 6;
+                    $('.431-38').css('background-color', '#ff0300');
+                    $('.group-1-5').addClass('red')
+                } else {
+                    alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại ')
+                }
+
+            });
+            //step6
+            $('#c-CS1T1-group-1').click(function () {
+
+                if (step == 6) {
+                    step = 7;
+                    $('.CS1T1 img').attr('src', '/image/2-a.png');
+                    $('.group-1-6').addClass('red')
+                } else {
+                    alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại ')
+                }
+
+            });
+            //step7
+            $('#c-CS4T1-group-1').click(function () {
+
+                if (step == 7) {
+                    $('.CS4T1').css('background-color', '#ff0300');
+                    $('.group-1-7').addClass('red')
+                } else {
+                    alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại ')
+                }
+
+            });
+            $('#c-T1-group-1,#c-431-group-1,#c-131-group-1,#o-431-38-group-1,#o-CS1T1-group-1,#o-CS4T1-group-1').click(function () {
+                alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại ')
+            });
+
+
+            //group-2
+            //step1
+            $('#o-431-38-group-2').click(function () {
+
+                if (step == 1) {
+                    step = 2;
+                    $('.431-38').css('background-color', '#01fb42');
+                    $('.group-2-1').addClass('red')
+
+                } else {
+                    alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại ')
+                }
+
+            });
+            //step2
+            $('#o-CS1T1-group-2').click(function () {
+
+                if (step == 2) {
+                    step = 3;
+                    $('.CS1T1 img').attr('src', '/image/2-b.png');
+                    $('.group-2-2').addClass('red')
+                } else {
+                    alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại ')
+                }
+
+            });
+            //step3
+            $('#o-CS4T1-group-2').click(function () {
+
+                if (step == 3) {
+                    step = 4;
+                    $('.CS4T1').css('background-color', '#01fb42');
+                    $('.group-2-3').addClass('red')
+                } else {
+                    alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại ')
+                }
+
+            });
+            //step4
+            $('#c-131-1-group-2').click(function () {
+
+                if (step == 4) {
+                    step = 5;
+                    $('.131-1,.131-1-b,.131-15-r,.131-t').css('background-color', '#ff0300');
+                    $('.group-2-4').addClass('red')
+                } else {
+                    alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại ')
+                }
+
+            });
+            //step5
+            $('#c-131-group-2').click(function () {
+
+                if (step == 5) {
+                    step = 6;
+                    $('.131,.131-b,.T1-t,.CS1T1-r').css('background-color', '#ff0300');
+                    $('.group-2-5').addClass('red')
+                } else {
+                    alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại ')
+                }
+
+            });
+            //step6
+
+            $('#c-431-group-2').click(function () {
+
+                if (step == 6) {
+                    step = 7
+                    $('.431').css('background-color', '#ff0300');
+                    $('.431-up img').attr('src', '/image/arrow-up-red.png');
+                    $('.431-down img').attr('src', '/image/arrow-down-red.png');
+                    $('.group-2-6').addClass('red')
+                } else {
+                    alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại ')
+                }
+
+            });
+            //step7
+            $('#c-T1-group-2').click(function () {
+
+                if (step == 7) {
+                    $('.T1-b,.CS4T1-r,.431-38-r,.431-t,.431-b,.C41').css('background-color', '#ff0300');
+                    $('.T1 img').attr('src', '/image/1-a.jpg');
+                    $('.group-2-7').addClass('red')
+                } else {
+                    alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại ')
+                }
+
+            });
+            $('#c-431-38-group-2,#c-CS1T1-group-2,#c-CS4T1-group-2,#o-131-1-group-2,#o-131-group-2,#o-431-group-2,#o-T1-group-2').click(function () {
+                alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại ')
+            });
+
+
+
+            //group-3
+            //step1
+            $('#o-131-14-group-3').click(function () {
+
+                if (step == 1) {
+                    step = 2;
+                    $('.131-14').css('background-color', '#01fb42');
+                    $('.131-14-l').css('background-color', '');
+                    $('.group-3-1').addClass('red')
+                } else {
+                    alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại ')
+                }
+
+            });
+            //step2
+            $('#c-131-1-group-3').click(function () {
+
+                if (step == 2) {
+                    step = 3;
+                    $('.131-1,.131-1-b,.131-t,.131-15-r').css('background-color', '#ff0300');
+                    $('.group-3-2').addClass('red')
+                } else {
+                    alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại ')
+                }
+
+            });
+            //step3
+            $('#c-131-group-3').click(function () {
+
+                if (step == 3) {
+                    step = 4;
+                    $('.131,.131-t,.131-15-r,.131-b,.T1-t,.CS1T1-r').css('background-color', '#ff0300');
+                    $('.group-3-3').addClass('red')
+                } else {
+                    alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại ')
+                }
+
+            });
+            //step4
+            $('#c-431-group-3').click(function () {
+
+                if (step == 4) {
+                    step = 5;
+                    $('.431').css('background-color', '#ff0300');
+                    $('.431-up img').attr('src', '/image/arrow-up-red.png');
+                    $('.431-down img').attr('src', '/image/arrow-down-red.png');
+                    $('.group-3-4').addClass('red')
+                } else {
+                    alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại ')
+                }
+
+            });
+            //step5
+            $('#c-T1-group-3').click(function () {
+
+                if (step == 5) {
+                    $('.T1 img').attr('src', '/image/1-a.jpg');
+                    $('.C41,.431-b,.431-t,.431-38-r,.T1-b,.CS4T1-r').css('background-color', '#ff0300');
+                    $('.group-3-5').addClass('red')
+                } else {
+                    alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại ')
+                }
+
+            });
+            $('#c-131-14-group-3,#o-131-1-group-3,#o-131-group-3,#o-431-group-3,#o-T1-group-3').click(function () {
+                alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại ')
+            });
+
+            //group-4
+            //step1
+            $('#o-T1-group-4').click(function () {
+
+                if (step == 1) {
+                    step = 2;
+                    $('.T1 img').attr('src', '/image/1-b.jpg');
+                    $('.C41,.431-b,.431-t,.431-38-r,.T1-b,.CS4T1-r').css('background-color', '');
+                    $('.group-4-1').addClass('red')
+                } else {
+                    alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại ')
+                }
+
+            });
+            //step2
+            $('#o-431-group-4').click(function () {
+
+                if (step == 2) {
+                    step = 3;
+                    $('.431').css('background-color', '#01fb42');
+                    $('.431-up img').attr('src', '/image/arrow-up-green.png');
+                    $('.431-down img').attr('src', '/image/arrow-down-green.png');
+                    $('.group-4-2').addClass('red')
+                } else {
+                    alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại ')
+                }
+
+            });
+            //step3
+            $('#o-131-group-4').click(function () {
+
+                if (step == 3) {
+                    step = 4;
+                    $('.131,.131-b,.T1-t,.CS1T1-r').css('background-color', '');
+                    $('.group-4-3').addClass('red')
+                } else {
+                    alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại ')
+                }
+
+            });
+            //step4
+            $('#o-131-1-group-4').click(function () {
+
+                if (step == 4) {
+                    step = 5;
+                    $('.131-1,.131-t,.131-15-r,.131-1-b').css('background-color', '');
+                    $('.group-4-4').addClass('red')
+                } else {
+                    alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại ')
+                }
+
+            });
+            //step5
+            $('#c-131-14-group-4').click(function () {
+
+                if (step == 5) {
+                    $('.131-14-r,.131-14,.131-14-l').css('background-color', '#ff0300');
+                    $('.group-4-5').addClass('red')
+                } else {
+                    alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại ')
+                }
+
+            });
+            $('#c-T1-group-4,#c-431-group-4,#c-131-group-4,#c-131-1-group-4,#o-131-14-group-4').click(function () {
+                alert('Bạn đã thực hiện sai bước vui lòng thực hiện lại ')
+            });
+            function resetStylesAndImages() {
+                step = 1;
+                // Reset all background colors to their default
+                $('li').removeClass('red');
+                $('.C11,.C41').css('background-color', '');
+                $('.TUC11,.TUC11-l,.TUC11-r,.TUC11-t').css('background-color', '');
+                $('.131-1,.131-1-t,.131-1-b').css('background-color', '');
+                $('.131-14-r').css('background-color', '');
+                $('.131-15-r').css('background-color', '');
+                $('.131,.131-t,.131-b').css('background-color', '');
+                $('.T1-t,.T1-b').css('background-color', '');
+                $('.CS1T1-r').css('background-color', '');
+                $('.CS4T1-r').css('background-color', '');
+                $('.431-38-r').css('background-color', '');
+                $('.431,.431-t,.431-b').css('background-color', '');
+
+                // Reset image `src` attributes to their original state
+                $('.431-up img').attr('src', '/image/arrow-up.png'); // Replace with the default image path
+                $('.431-down img').attr('src', '/image/arrow-down.png');
+                $('.CS1T1 img').attr('src', '/image/2-b.png'); // Replace with the default image path
+                $('.T1 img').attr('src', '/image/1-b.jpg'); // Replace with the default image path
+                // Reset specific background colors to their default
+                $('.131-14,.131-15,.CS4T1,.431-38').css('background-color', '');
+
+            }
+
+        });
+    </script>
+    <script>
+        document.getElementById('button1').onclick = function() {
+            window.location.href = "DATNT3.html"; // URL của trang 1
+        };
+        document.getElementById('button2').onclick = function() {
+            window.location.href = "https://hcmute.edu.vn/"; // URL của trang 2
+        };
+        document.getElementById('button3').onclick = function() {
+            window.location.href = "https://feee.hcmute.edu.vn"; // URL của trang 3
+        };
+        // Kiểm tra trạng thái đăng nhập (giả lập)
+        const isLoggedIn = true; // Thay đổi thành false để kiểm tra trạng thái không đăng nhập  
+        const username = "Ngô Quang Trãi"; // Tên người dùng (giả lập)  
+
+        // Hiển thị thông tin tài khoản nếu đã đăng nhập
+        if (isLoggedIn) {
+            document.getElementById("accountBar").style.display = "flex";
+            document.getElementById("usernameDisplay").innerText = username;
+        }
+        // Xử lý khi nhấn nút "Thoát"
+        function logout() {
+            alert("Bạn đã thoát!");
+            // Giả lập điều hướng trở về trang đăng nhập
+            window.location.href = "DATNT1.html"; // Thay URL bằng trang đăng nhập thực tế
+        }
+
+    </script>
+</body>
+
+</html>

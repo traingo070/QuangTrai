@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiết Kế Website Về Quy Trình Vận Hành Trạm Biến Áp</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/stylemain.css">
+    <style>
+        .cover-page {
+
+
+            margin-top: 50px;
+        }
+
+        .cover-page h1 {
+            text-align: center;
+            font-size: 5rem;
+            margin-bottom: 30px;
+            color: #FF0000;
+
+        }
+
+        .cover-page h2 {
+            text-align: left;
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: #000011;
+        }
+
+        /* Thanh tài khoản */
+        .account-bar {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color:  rgb(0, 140, 255);
+            padding: 10px 20px;
+            border: 1px solid  blue;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .account-bar span {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .logout-button {
+            cursor: pointer;
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+
+        .logout-button:hover {
+            background-color: #e60000;
+        }
+        
+        
+    </style>
+</head>
+
+<body style="background-color:#FFF9C4">
+    <header>
+        <img src="/image/SPKT.jpg" alt="Hình ảnh" style="display: block; margin: 0 auto;">
+        <div class="container text-center mt-5"></div>
+        <div class="d-flex justify-content-center  pt-3">
+            <div class="nav-button mr-3" onclick="window.location.href='DATNT3.html'">Home</div>
+            <div class="nav-button mr-3" onclick="window.location.href='https://hcmute.edu.vn/'">Thông tin Trường</div>
+           <div  class="nav-button" onclick="window.location.href='https://feee.hcmute.edu.vn'"> Thông tin khoa Điện Điện tử</div>
+        </div>
+        <div class="container text-center mt-5"></div>
+        <div class="account-bar" id="accountBar" style="">
+            <span id="usernameDisplay">Ngô Quang Trãi</span>
+            <button class="logout-button" onclick="logout()">Thoát</button>
+        </div>          
+    </header>
+    <h1 class="text-center"style="color: #FF0000;">Thiết Kế Website Về Quy Trình Vận Hành Trạm Biến Áp</h1>
+    <div class="container-fluid">
+        <div class="row m-0 pt-5">
+            <div class="col-6">
+                <h2 id="I"style="cursor: pointer;">I. Giới thiệu</h2>
+                <ul>
+                <h2 id="device"  style="cursor: pointer;">Quy trình vận hành với từng thiết bị </h2>
+                <div class="ml-5 mb-4 group-1 d-none">
+                    <ul>
+                        <li class="click"  onclick="window.location.href='/maycat.html'">Vận hành Máy cắt</li>
+                        <li class="click" onclick="window.location.href='/giaocachly.html'">Vận hành Dao Cách Ly</li>
+                        <li class="click" onclick="window.location.href='/daotiepdia.html'">Vận hành Dao Tiếp Địa</li>
+                    </ul>
+                </div>
+                <h2 id="devices"     style="cursor: pointer;">Quy trình vận hành các thiết bị trong 1 nhánh của trạm biến áp</h2>
+                <div class="ml-5 mb-4 group-2 d-none">
+                    <ul>
+                        <li class="click"  onclick="window.location.href='C11_C41,C12_C42.html'">Thao tác trên các thiết bị từ thanh cái C41 lên các thiết bị cao áp</li>
+                        <li class="click" onclick="window.location.href='Ngora.html'">Thao tác trên các thiết bị từ thanh cái C41 về các đường dây điện</li>
+                        <li class="click" onclick="window.location.href='/C11_C41.html'">Thao tác từ C11 đến C41</li>
+                    </ul>
+                </div>
+                </ul>
+            </div>
+            <div class="col-6">
+                <img class="img-fluid" src="/image/MBA.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+
+        <script>
+        document.getElementById('device').onclick = function () {
+            $('.group-1').removeClass('d-none')
+        };
+        document.getElementById('devices').onclick = function () {
+            $('.group-2').removeClass('d-none')
+        };
+        document.getElementById('III').onclick = function () {
+            window.location.href = "QUYTRINH.html"; // URL cần chuyển
+        };
+        // Kiểm tra trạng thái đăng nhập (giả lập)
+        const isLoggedIn = true; // Thay đổi thành false để kiểm tra trạng thái không đăng nhập  
+        const username = "Ngô Quang Trãi"; // Tên người dùng (giả lập)  
+
+        // Hiển thị thông tin tài khoản nếu đã đăng nhập
+        if (isLoggedIn) {
+            document.getElementById("accountBar").style.display = "flex";
+            document.getElementById("usernameDisplay").innerText = username;
+        }
+        // Xử lý khi nhấn nút "Thoát"
+        function logout() {
+            alert("Bạn đã thoát!");
+            // Giả lập điều hướng trở về trang đăng nhập
+            window.location.href = "DATNT1.html"; // Thay URL bằng trang đăng nhập thực tế
+        }
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quy trình vận hành Dao Tiếp Địa</title>
+    <!-- Bootstrap CSS (without integrity) -->
+    <link rel="stylesheet" href="/style/stylemain.css">
+    <link rel="stylesheet" href="/style/common.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container d-flex justify-content-center">
+            <img class="img-fluid" src="/image/SPKT.jpg" alt="SPKT Image">
+        </div>
+        <div class="d-flex justify-content-center  pt-3">
+            <div class="nav-button mr-3" onclick="window.location.href='DATNT3.html'">Home</div>
+            <div class="nav-button mr-3" onclick="window.location.href='https://hcmute.edu.vn/'">Thông tin Trường</div>
+            <div class="nav-button" onclick="window.location.href='https://feee.hcmute.edu.vn'"> Thông tin khoa Điện
+                Điện tử</div>
+        </div>
+        <div class="account-bar d-flex align-items-center gap-2" id="accountBar" style="display: none;">
+            <span id="usernameDisplay">Ngô Quang Trãi</span>
+            <button class="btn btn-danger btn-sm logout-button" onclick="logout()">Thoát</button>
+        </div>
+    </header>
+    <h1 class="text-center mt-5 mb-4 text-danger">Các cách vận hành Dao Tiếp Địa</h1>
+    <div class="container-fuild">
+        <div class="row m-0">
+            <div class="col-12 col-md-5 mt-5">
+                <div class="ml-5 pl-5">
+                    <div class="mb-4">
+                        <h3 class="text-success">Các cách vận hành Dao Tiếp Địa</h2>
+                            <ul>
+                                <li class="click" id="group-1">Vận hành Dao Tiếp Địa bằng điện</li>
+                                <li class="click" id="group-2">Vận hành Dao Tiếp Địa bằng tay</li>
+                                <li class="click" id="group-3">Vận hành Dao Tiếp Địa từ xa</li>
+
+                            </ul>
+                    </div>
+                    <div class="ml-5 mb-4 group-1 d-none">
+                        <h4 class="text-success"> Quy trình thao tác vận hành bằng điện</h4>
+                        <ul>
+                            <li class="group-1-1">B1: Bật công tắc 3 nấc chuyển về chế độ Local để thực hiện</li>
+                            <li class="group-1-2">B2: Bật nút nhấn Close để đóng Dao Tiếp Địa</li>
+                            <li class="group-1-3">B3: Bật nút nhấn Open để đóng Dao Tiếp Địa (thực hiện B3 khi mở Dao Tiếp Địa)</li>
+                        </ul>
+                    </div>
+                    <div class="ml-5 mb-4 group-2 d-none">
+                        <h4 class="text-success"> Quy trình thao tác vận hành bằng tay</h4>
+                        <ul>
+                            <li class="group-2-1">B1: Bật công tắc 3 nấc chuyển về chế độ Manual để thực hiện</li>
+                            <li class="group-2-2">B2: Đưa tay quay vào vị trí đóng cắtDao Tiếp Địa</li>
+                            <li class="group-2-3">B3: Xoay tay quay thuận chiều kim đồng hồ để đóng Dao Tiếp Địa</li>
+                            <li class="group-2-4">B4: Xoay tay quay nghịch chiều kim đồng hồ để mở Dao Tiếp Địa (thực hiện B4 khi mở Dao
+                                cách Ly)</li>
+                        </ul>
+                    </div>
+                    <div class="ml-5 mb-4 group-3 d-none">
+                        <h4 class="text-success"> Để thực hiện thao tác vận hành từ xa thì cần bật công tắc 3 nấc chuyển
+                            về chế độ Remote ở tủ để thực hiện từ xa bằng scada</h4>
+                        <h4 class="text-success"> Lưu ý Dao Tiếp Địa đóng được khi Dao Cách ly , Máy Cắt đã được mở và
+                            không có điện hoặc các thiết bị không hoạt động</h4>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-12 col-md-7 mt-5 mb-5 p-5 group-img d-none">
+                <div class="d-flex justify-content-center">
+                    <div class="col-6">
+                        <div class="text-center">
+                            <span class="btn" data-value="Manual">Manual</span>
+                            <span class="btn" data-value="Local">Local</span>
+                            <span class="btn" data-value="Remote">Remote</span>
+                        </div>
+                        <div class="clock-switch">
+                            <div class="rectangle-dial align-items-center d-flex justify-content-center ">
+                                <div class="dial">
+                                    <div class="pointer"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <div class="button-container mt-2 group-1 d-done">
+                                <p><button class="btn-circle btn-red"></button> Close</p>
+                                <p><button class="btn-circle btn-black"></button> Stop</p>
+                                <p><button class="btn-circle btn-green"></button> Open</p>
+                            </div>
+                            <div class="pt-3 group-2 d-done">
+                            <div class="row ml-2">
+                                <div class="col-4 btn-left" style="cursor:pointer;margin-right: -1rem;"> <img class="img-fluid" src="/image/left.png" style="max-width: 80px;transform: rotate(180deg);" alt="">
+                                </div>
+                                <div class="col-4" style="padding: 0;"> <img class=" manual img-fluid" style="max-width: 100px;" src="/image/manual.jpg" alt=""></div>
+                                <div class="col-4 btn-right" style="cursor:pointer;margin-left: -1.7rem;"> <img class="img-fluid" src="/image/right.png" style="max-width: 80px;" alt=""></div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div style="position: relative;">
+                            <img class="img-fluid DCL" src="/image/DTD mở.jpg" style="max-height: 277px;" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper (without integrity) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Toggle visibility for instruction groups
+            $('.click').on('click', function () {
+                const groupId = $(this).attr('id');
+
+                // Hide all groups and show the clicked one
+                $('.group-1, .group-2, .group-3, .group-4').addClass('d-none');
+                $(`.${groupId}`).removeClass('d-none');
+                $('.group-img').removeClass('d-none');
+            });
+
+            const angles = {
+                "Manual": -40, // 10 o'clock
+                "Local": 0,    // 12 o'clock
+                "Remote": 40   // 2 o'clock
+            };
+
+            // Initialize value and update UI accordingly
+            let value = $(".btn[data-value='Remote']").data("value") || "Remote";
+            updateUI(value);
+
+            // Button click handlers for images
+            $('.btn-red, .btn-left').click(function () {
+                $('.DCL').attr('src', '/image/DTD đóng.jpg');
+            });
+
+            $('.btn-green, .btn-right').click(function () {
+                $('.DCL').attr('src', '/image/DTD mở.jpg');
+            });
+
+            // General button click handler
+            $(".btn").click(function () {
+                value = $(this).data("value"); // Update value based on clicked button
+                $("#selected-option").text(`Selected: ${value}`);
+                $(".pointer").css("transform", `translateX(-50%) rotate(${angles[value]}deg)`);
+
+                // Update UI based on the new value
+                updateUI(value);
+            });
+
+            function updateUI(value) {
+                console.log(value)
+                if (value === 'Local') {
+                    $('.btn-circle').prop('disabled', false);
+                } else {
+                    $('.btn-circle').prop('disabled', true);
+                }
+
+                if (value === 'Manual') {
+                    $('.btn-left, .btn-right').removeClass('disabled');
+                } else {
+                    $('.btn-left, .btn-right').addClass('disabled');
+                }
+            }
+        });
+    </script>
+    <script>
+        document.getElementById('button1').onclick = function () {
+            window.location.href = "DATNT3.html"; // URL của trang 1
+        };
+        document.getElementById('button2').onclick = function () {
+            window.location.href = "https://hcmute.edu.vn/"; // URL của trang 2
+        };
+        document.getElementById('button3').onclick = function () {
+            window.location.href = "https://feee.hcmute.edu.vn"; // URL của trang 3
+        };
+        // Kiểm tra trạng thái đăng nhập (giả lập)
+        const isLoggedIn = true; // Thay đổi thành false để kiểm tra trạng thái không đăng nhập  
+        const username = "Ngô Quang Trãi"; // Tên người dùng (giả lập)  
+
+        // Hiển thị thông tin tài khoản nếu đã đăng nhập
+        if (isLoggedIn) {
+            document.getElementById("accountBar").style.display = "flex";
+            document.getElementById("usernameDisplay").innerText = username;
+        }
+        // Xử lý khi nhấn nút "Thoát"
+        function logout() {
+            alert("Bạn đã thoát!");
+            // Giả lập điều hướng trở về trang đăng nhập
+            window.location.href = "DATNT1.html"; // Thay URL bằng trang đăng nhập thực tế
+        }
+
+    </script>
+</body>
+
+</html>

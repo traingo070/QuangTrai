@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiết Kế Website Về Quy Trình Vận Hành Trạm Biến Áp</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .cover-page {
+
+
+            margin-top: 50px;
+        }
+
+        .cover-page h1 {
+            text-align: center;
+            font-size: 5rem;
+            margin-bottom: 30px;
+            color: #FF0000;
+
+        }
+
+        .cover-page h2 {
+            text-align: left;
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: #000011;
+        }
+
+        /* Thanh tài khoản */
+        .account-bar {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color:  rgb(0, 140, 255);
+            padding: 10px 20px;
+            border: 1px solid  blue;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .account-bar span {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .logout-button {
+            cursor: pointer;
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+
+        .logout-button:hover {
+            background-color: #e60000;
+        } 
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .nav-button {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .nav-button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+
+<body style="background-color:#FFF9C4">
+    <header>
+        <img src="/image/SPKT.jpg" alt="Hình ảnh" style="display: block; margin: 0 auto;">
+        <div class="button-container">
+            <button class="nav-button" id="button1">Home </button>
+            <button class="nav-button" id="button2">Thông tin Trường </button>
+            <button class="nav-button" id="button3">Thông tin khoa Điện Điện tử  </button>
+        </div>
+        <div class="container text-center mt-5"></div>
+        <div class="account-bar" id="accountBar" style="display: none;">
+            <span id="usernameDisplay">Username</span>
+            <button class="logout-button" onclick="logout()">Thoát</button>
+        </div>
+        
+    </header>
+    <h1 class="text-center" style="color: #FF0000;">Thiết Kế Website Về Quy Trình Vận Hành Trạm Biến Áp</h1>
+    <div class="container">
+        <div class="row m-0 pt-5">
+            <div >
+                <h2 id="II"     style="cursor: pointer;">II. Sơ đồ Trạm biến áp</h2>              
+            </div>
+            <div >
+                <a href="/file/SDNL.pdf" target="_blank" rel="noopener noreferrer">
+                    <img class="img-fluid" src="/image/SDNL.jpg" alt="">
+                </a>
+                
+            </div>
+        </div>
+    </div>
+
+
+        <script>
+        document.getElementById('button1').onclick = function() {
+            window.location.href = "DATNT3.html"; // URL của trang 1
+        };
+        document.getElementById('button2').onclick = function() {
+            window.location.href = "https://hcmute.edu.vn/"; // URL của trang 2
+        };
+        document.getElementById('button3').onclick = function() {
+            window.location.href = "https://feee.hcmute.edu.vn"; // URL của trang 3
+        };
+        // Kiểm tra trạng thái đăng nhập (giả lập)
+        const isLoggedIn = true; // Thay đổi thành false để kiểm tra trạng thái không đăng nhập  
+        const username = "Ngô Quang Trãi"; // Tên người dùng (giả lập)  
+
+        // Hiển thị thông tin tài khoản nếu đã đăng nhập
+        if (isLoggedIn) {
+            document.getElementById("accountBar").style.display = "flex";
+            document.getElementById("usernameDisplay").innerText = username;
+        }
+        // Xử lý khi nhấn nút "Thoát"
+        function logout() {
+            alert("Bạn đã thoát!");
+            // Giả lập điều hướng trở về trang đăng nhập
+            window.location.href = "DATNT1.html"; // Thay URL bằng trang đăng nhập thực tế
+        }
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

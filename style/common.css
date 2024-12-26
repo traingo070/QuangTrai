@@ -1,0 +1,207 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFF9C4 !important;
+}
+
+.account-bar {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #f3f3f3;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logout-button:hover {
+    background-color: #e60000;
+}
+.click{
+    cursor: pointer;
+    font-weight: bolder;
+}
+.click:hover{
+   text-decoration: underline;
+}
+.btn{
+   max-width: 100px;
+}
+.title-btn{
+    font-weight: 700;
+   margin-bottom: 1rem;
+}
+
+
+.clock-switch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .dial {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 5px solid black;
+    border-radius: 50%;
+    background: #fff;
+  }
+  .rectangle-dial{
+    width: 120px;
+    height: 120px;
+    border: 5px solid black;
+  }
+
+  .pointer {
+    position: absolute;
+    width: 12px;
+    height: 40px;
+    background: black;
+    top: 20px;
+    left: 50%;
+    transform-origin: bottom center;
+    transform: translateX(-50%) rotate(40deg);
+    /* Góc ban đầu */
+    transition: transform 0.3s ease;
+  }
+
+  .pointer::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    /* Nửa chiều rộng của mũi tên */
+    border-right: 6px solid transparent;
+    border-bottom: 12px solid black;
+    /* Màu của mũi tên */
+    top: -12px;
+    /* Vị trí mũi tên trên đầu kim */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #selected-option {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+  }
+  .button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button-container p {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Khoảng cách giữa nút và văn bản */
+  margin: 0;
+}
+
+.btn-circle {
+  width: 30px; /* Kích thước của nút */
+  height: 30px;
+  border-radius: 50%; /* Tạo hình tròn */
+  border: none;
+  cursor: pointer;
+}
+
+.btn-red {
+  background-color: red;
+}
+
+.btn-black {
+  background-color: black;
+}
+
+.btn-green {
+  background-color: green;
+}
+
+/* Thêm hiệu ứng hover */
+.btn-circle:hover {
+  opacity: 0.8;
+}
+
+/* Văn bản */
+.button-container p {
+  font-size: 16px;
+  color: #333;
+}
+
+
+
+.cover-page {
+
+
+  margin-top: 50px;
+}
+
+.cover-page h1 {
+  text-align: center;
+  font-size: 5rem;
+  margin-bottom: 30px;
+  color: #FF0000;
+
+}
+
+.cover-page h2 {
+  text-align: left;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #000011;
+}
+
+/* Thanh tài khoản */
+.account-bar {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color:  rgb(0, 140, 255);
+  padding: 10px 20px;
+  border: 1px solid  blue;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.account-bar span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.logout-button {
+  cursor: pointer;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.logout-button:hover {
+  background-color: #e60000;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.nav-button {
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.nav-button:hover {
+  background-color: darkblue;
+}

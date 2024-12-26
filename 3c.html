@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Công Tắc Đồng Hồ</title>
+  <!-- Bootstrap 4 CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .clock-switch {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .dial {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      border: 5px solid black;
+      border-radius: 50%;
+      background: #fff;
+    }
+    .rectangle-dial{
+      width: 120px;
+      height: 120px;
+      border: 5px solid black;
+    }
+
+    .pointer {
+      position: absolute;
+      width: 12px;
+      height: 40px;
+      background: black;
+      top: 20px;
+      left: 50%;
+      transform-origin: bottom center;
+      transform: translateX(-50%) rotate(0deg);
+      /* Góc ban đầu */
+      transition: transform 0.3s ease;
+    }
+
+    .pointer::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 6px solid transparent;
+      /* Nửa chiều rộng của mũi tên */
+      border-right: 6px solid transparent;
+      border-bottom: 12px solid black;
+      /* Màu của mũi tên */
+      top: -12px;
+      /* Vị trí mũi tên trên đầu kim */
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    #selected-option {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #333;
+    }
+    .button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .button-container p {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Khoảng cách giữa nút và văn bản */
+    margin: 0;
+  }
+
+  .btn-circle {
+    width: 30px; /* Kích thước của nút */
+    height: 30px;
+    border-radius: 50%; /* Tạo hình tròn */
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-red {
+    background-color: red;
+  }
+
+  .btn-black {
+    background-color: black;
+  }
+
+  .btn-green {
+    background-color: green;
+  }
+
+  /* Thêm hiệu ứng hover */
+  .btn-circle:hover {
+    opacity: 0.8;
+  }
+
+  /* Văn bản */
+  .button-container p {
+    font-size: 16px;
+    color: #333;
+  }
+  </style>
+</head>
+
+<body>
+  <div>
+    <span class="btn" data-value="Manual">Manual</span>
+    <span class="btn" data-value="Local">Local</span>
+    <span class="btn" data-value="Remote">Remote</span>
+  </div>
+  <div class="clock-switch">
+    <div class="rectangle-dial align-items-center d-flex justify-content-center ">
+      <div class="dial">
+        <div class="pointer"></div>
+      </div>
+    </div>
+  </div>
+  <div class="button-container mt-2">
+    <p><button class="btn-circle btn-red"></button> Close</p>
+    <p><button class="btn-circle btn-black"></button> Stop</p>
+    <p><button class="btn-circle btn-green"></button> Open</p>
+  </div>
+  
+  <!-- jQuery and Bootstrap 4 JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      const angles = {
+        "Manual": -40, // 10 giờ
+        "Local": 0,    // 12 giờ
+        "Remote": 40   // 2 giờ
+      };
+
+      $(".btn").click(function () {
+        const value = $(this).data("value");
+        $("#selected-option").text(`Selected: ${value}`);
+        $(".pointer").css("transform", `translateX(-50%) rotate(${angles[value]}deg)`);
+      });
+    });
+  </script>
+</body>
+
+</html>

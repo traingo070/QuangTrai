@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Đăng Nhập</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .header-image {
+        width: 100%;
+        height: auto;
+      }
+      .login-box {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 400px;
+        text-align: center;
+        margin-top: 100px;
+      }
+      .login-box h1 {
+        margin-bottom: 20px;
+      }
+      .login-box input[type="text"],
+      .login-box input[type="password"] {
+        width: 90%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .login-box button {
+        width: 90%;
+        padding: 20px;
+        background-color: #28a745;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .login-box button:hover {
+        background-color: #218838;
+      }
+      .error-message {
+        color: red;
+        display: none;
+      }
+    </style>
+  </head>
+  <body style="background-image: url('/image/1111.jpg');margin: 0 auto; background-repeat: no-repeat;background-size: cover;  ">
+    <img src="/image/SPKT.jpg" alt="Minh Họa" class="header-image" />
+    <!-- Thay đường dẫn ảnh -->
+    <div class="login-box">
+      <h1>Đăng Nhập</h1>
+      <form onsubmit="return validateLogin()">
+        <input
+          type="text"
+          id="username"
+          placeholder="Tên người dùng"
+          required
+        />
+        <input type="password" id="password" placeholder="Mật khẩu" required />
+        <button type="submit">Đăng Nhập</button>
+      </form>
+      <p id="error-message" class="error-message">
+        Tên người dùng hoặc mật khẩu không đúng!
+      </p>
+    </div>
+
+    <script>
+      function validateLogin() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        if (username === "HCMUTE" && password === "1") {
+          window.location.href = "DATNT3.html";
+          return false;
+        } else {
+          document.getElementById("error-message").style.display = "block";
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

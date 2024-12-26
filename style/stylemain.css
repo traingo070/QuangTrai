@@ -1,0 +1,210 @@
+.box {
+    border: 1px solid black;
+    min-height: 60vh;
+    min-width: 70vh;
+}
+
+.line {
+    background: black;
+    width: 2px;
+    height: 30px;
+}
+
+.diamond {
+    width: 15px;
+    /* Độ rộng */
+    height: 15px;
+    /* Chiều cao */
+    border: 1px solid black;
+    position: relative;
+    transform: rotate(45deg);
+    /* Xoay hình vuông 45 độ */
+
+}
+
+.turn-o-horizontal {
+    width: 3px;
+    /* Độ rộng */
+    height: 20px;
+    /* Chiều cao */
+    position: relative;
+    transform: rotate(75deg);
+    background: black;
+    /* Xoay hình vuông 45 độ */
+
+}
+.turn-c-horizontal {
+    width: 3px;
+    /* Độ rộng */
+    height: 20px;
+    /* Chiều cao */
+    position: relative;
+    transform: rotate(90deg);
+    background: #ff0300;
+    /* Xoay hình vuông 45 độ */
+
+}
+.turn-o-vertical {
+    width: 3px;
+    /* Độ rộng */
+    height: 20px;
+    /* Chiều cao */
+   
+    position: relative;
+    transform: rotate(20deg);
+    background: black;
+    /* Xoay hình vuông 45 độ */
+
+}
+.turn-c-vertical {
+    width: 3px;
+    /* Độ rộng */
+    height: 20px;
+    /* Chiều cao */
+    
+    position: relative;
+    transform: rotate(0deg);
+    background: #ff0300;
+    /* Xoay hình vuông 45 độ */
+
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.circle-mba {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.rectangle {
+    width: 15px;
+    height: 30px;
+    border: 1px solid black;
+}
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid black;
+}
+.arrow-close {
+    border-bottom: 15px solid #ff0300;
+}
+.arrow-open {
+    border-bottom: 15px solid #01fb42;
+}
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid black;
+}
+
+.horizontal-line {
+    width: 40px;
+    height: 2px;
+    background: black;
+}
+
+.horizontal-main {
+    width: 160px;
+    height: 6px;
+    background: black;
+    border-radius: 4px;
+}
+button{
+    width: 100%;
+}
+.line-close{
+    background-color: #ff0300;
+}
+.line-open{
+    background-color:#01fb42;
+}
+
+
+.cover-page {
+
+
+    margin-top: 50px;
+}
+
+.cover-page h1 {
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 30px;
+    color: #FF0000;
+
+}
+
+.cover-page h2 {
+    text-align: left;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #000011;
+}
+
+/* Thanh tài khoản */
+.account-bar {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color:  rgb(0, 140, 255);
+    padding: 10px 20px;
+    border: 1px solid  blue;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 256px;
+}
+
+.account-bar span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.logout-button {
+    cursor: pointer;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.logout-button:hover {
+    background-color: #e60000;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.nav-button {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.nav-button:hover {
+    background-color: darkblue;
+}
+.disabled {
+    pointer-events: none;
+}
+.red{
+    color: #FF0000;
+}
